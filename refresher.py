@@ -17,7 +17,13 @@ unit = "seconds"
 
 # function
 def calcuate_time(number_of_days, custom_message):
-    print(f"{number_of_days} + {the_operation} {unit} {custom_message}")
+    if number_of_days > 0:
+        return print(
+            f"{number_of_days} + {the_operation} {unit} {custom_message}")
+    elif number_of_days == 0:
+        print("theres no such thing as zero days")
+    else:
+        print("inavliad input")
 
 
 calcuate_time(21, "great")
@@ -27,7 +33,7 @@ calcuate_time(31, "awseome")
 input("how many days: \n")
 
 # set the users input int a value
-user_input = input("how many days: \n")
+user_input = int(input("how many days: \n"))
 print(user_input)
 
 calcuate_time(user_input, "passing value")
